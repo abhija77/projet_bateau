@@ -1,0 +1,7 @@
+{
+  "name": "store_peche",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
