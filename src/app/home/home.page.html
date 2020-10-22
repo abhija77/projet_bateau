@@ -1,9 +1,15 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+  <div class="head">
+    <div class="home-btn">
+      <img src="assets/images/homeLogo.png" />
+    </div>
+    <div class="head__title">
+      Le Bateau de Thibault
+    </div>
+    <div class="cart-btn">
+      <img src="assets/images/cartLogo.png" alt="">
+    </div>
+  </div>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -13,8 +19,28 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<div id="container">
+  <ion-grid>
+    <ion-row >
+      <ion-col size="12" >
+<app-button name="Produits et promotions"></app-button>
+      </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+<app-button name="Bateaux" nameIcon="boat-outline"></app-button>
+        </ion-col>
+        <ion-col size="6">
+<app-button name="Restaurants"></app-button>
+        </ion-col>
+        <ion-col size="6">
+<app-button name="Recettes"></app-button>
+        </ion-col>
+        <ion-col size="6">
+<app-button name="Contact"></app-button>
+        </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</div>
 </ion-content>
