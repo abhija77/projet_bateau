@@ -1,20 +1,16 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
+  <ion-header [translucent]="true">
+    <div class="head">
+      <div class="home-btn">
+        <img src="assets/images/homeLogo.png" />
+      </div>
+      <div class="head__title">
+        Home
+      </div>
+    </div>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <button (click)="goToCategory()">Aller aux category</button>
   </div>
 </ion-content>

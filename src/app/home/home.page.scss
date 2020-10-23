@@ -25,3 +25,21 @@
 #container a {
   text-decoration: none;
 }
+
+.head {
+  background-color: black;
+  display: flex;
+  color: white;
+  font-family: 'Vegan';
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 10px 2px 10px;
+}
+.home-btn > img,
+.cart-btn > img{
+  height: 35px;
+}
+.title {
+  text-align: center;
+  color: white;
+}

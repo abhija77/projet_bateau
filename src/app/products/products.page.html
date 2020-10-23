@@ -6,8 +6,9 @@
     <div class="head__title">
       Le Bateau de Thibault
     </div>
-    <div class="cart-btn">
+    <div class="cart-btn" (click)="goToCart()">
       <img src="assets/images/cartLogo.png" alt="">
+      <ion-badge color="primary">{{cartProducts.length}}</ion-badge>
     </div>
   </div>
 </ion-header>
@@ -31,6 +32,7 @@
               <ion-item>
                 <ion-label> {{ product.price }} €</ion-label>
               </ion-item>
+              <ion-button (click)="toggleActionCart(product)" ><ion-icon name="cart-outline"></ion-icon></ion-button>
             </ion-item>
         </ion-card>
     </div>

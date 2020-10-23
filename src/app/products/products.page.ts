@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartProduct } from '../models/cart-product.model';
+import { Product } from '../models/product.model';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductsPage implements OnInit {
 
-  constructor(public http: HttpClient, private route: ActivatedRoute, private router: Router) {
+  constructor(public http: HttpClient, private route: ActivatedRoute, private router: Router, private cartService: CartService) {
     this.route.queryParams.subscribe(params => {
       if (this.router.getCurrentNavigation().extras.state)
         this.categoryNumber = this.router.getCurrentNavigation().extras.state.id;
@@ -18,9 +21,36 @@ export class ProductsPage implements OnInit {
 
   products = [];
   categoryNumber: number;
+  cartProducts: CartProduct[];
+  doActionAdd = true;
 
   ngOnInit() {
     this.getProductList();
+    this.cartService.cartProducts.subscribe(value => {
+      console.log(value.length);
+      this.cartProducts = value;
+    })
+  }
+
+  addToCart(element: CartProduct){
+    this.cartService.addProduct(element);
+  }
+
+  goToCart(){
+    this.router.navigate(['/cart'])
+  }
+
+  removeFromCart(element: CartProduct){
+    this.cartService.removeProduct(element);
+  }
+
+  toggleActionCart(element: Product){
+    const product = this.cartProducts.filter(value => value.product.id == element.id);
+    if(product.length == 0){
+      this.addToCart({quantity:1,product: element})
+    } else {
+      this.removeFromCart(product[0]);
+    }
   }
 
   getProductList() {
@@ -37,4 +67,6 @@ export class ProductsPage implements OnInit {
         (err) => console.log("erreur " + err)
       )
   }
+
+
 }
