@@ -1,0 +1,16 @@
+<ion-content>
+  <div id="container">
+    <ion-card>
+      <ion-img [src]=" info.image "></ion-img>
+      <ion-card-content>
+        <ion-card-header>
+          <ion-card-title> {{ info.title }} </ion-card-title>
+          <ion-card-subtitle> {{ info.subtitle }} </ion-card-subtitle>
+        </ion-card-header>
+        <div class="paragraphe">
+          <p *ngFor="let line of info.description"> {{ line }} </p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
