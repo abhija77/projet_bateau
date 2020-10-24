@@ -1,13 +1,21 @@
 #container{
-
+  background-image:url("../../assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
     opacity: 80%;
     height: 100%;
-  padding-top: 80%;
+  padding-top: 20%;
     width: 100%;
   }
 ion-content{
   display: flex;
   flex-direction: column;
+}
+
+ion-card{
+  opacity: 0.8;
+  color:white;
+  text-align: center;
 }
 
 #buttons{
