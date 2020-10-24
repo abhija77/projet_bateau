@@ -1,6 +1,7 @@
 const restaurant = [
     {
       title: "Les fous de l'ile",
+      index:0,
       subtitle: "xxx yyy zzz",
       image: "assets/images/fousDeLIle@3x.png",
       description: [
@@ -18,6 +19,7 @@ const restaurant = [
     },
     {
       title: "Bistrot des Garscons",
+      index:1,
       subtitle: "xxx yyy zzz",
       image: "assets/images/desGascons@3x.png",
       description: [
@@ -35,6 +37,7 @@ const restaurant = [
     },
     {
       title: "Bistrot des Landais",
+      index:2,
       subtitle: "xxx yyy zzz",
       image: "assets/images/bistrotLandais@3x.png",
       description: [
@@ -52,6 +55,7 @@ const restaurant = [
     },
     {
       title: "Villa 9-Trois",
+      index:3,
       subtitle: "xxx yyy zzz",
       image: "assets/images/villa9Trois@3x.png",
       description: [
@@ -69,6 +73,7 @@ const restaurant = [
     },
     {
       title: "Bistrot du Sommelier",
+      index:4,
       subtitle: "xxx yyy zzz",
       image: "assets/images/duSommelier@3x.png",
       description: [

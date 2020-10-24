@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,8 +10,16 @@ export class HomePage {
 
   constructor(private router: Router) {}
 
-  goToCategory(){
-    this.router.navigate(["/category"]);
+  goCategory(){
+    this.router.navigate(['category']);
   }
 
+  goDetails(categorie){
+    let params: NavigationExtras = {
+      state: {
+        categorie: categorie
+      }
+    };
+    this.router.navigate(['menu'], params)
+  }
 }

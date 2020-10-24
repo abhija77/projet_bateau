@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import bateau from '../constants/bateau'
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -8,19 +8,26 @@ import bateau from '../constants/bateau'
 })
 export class DetailsPage implements OnInit {
   // @Input() info: object
-  constructor() { }
+
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.route.queryParams.subscribe(params => {
+      if (this.router.getCurrentNavigation().extras.state) {
+        this.page = this.router.getCurrentNavigation().extras.state.categorie[this.router.getCurrentNavigation().extras.state.id];
+      }
+    })
+  }
+  page: any
 
   ngOnInit() {
   }
 
-  info = bateau[0]
 
   // info = 
   //   {
   //     title: string,
   //     subtitle: string,
   //     image: string,
-  //     description: array of string
+  //     description: array of stringinfo
   //   }
 
 }

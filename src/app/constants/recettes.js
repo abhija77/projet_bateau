@@ -1,6 +1,7 @@
 const recettes = [
     {
       title: "Homard en chaud-froid",
+      index:0,
       subtitle: "",
       image: "assets/images/homardRecette@3x.png",
       description: [
@@ -13,6 +14,7 @@ const recettes = [
     },
     {
         title: "Noix de Saint-Jacques flambees en cognac",
+        index:1,
         subtitle: "",
         image: "assets/images/saintJacques@3x.png",
         description: [
@@ -30,6 +32,7 @@ const recettes = [
       },
       {
         title: "Bar roti au laurier frais",
+        index:2,
         subtitle: "",
         image: "assets/images/barRecette@3x.png",
         description: [
@@ -47,8 +50,45 @@ const recettes = [
       },
       {
         title: "Tourteau linguine",
+        index:3,
         subtitle: "xxx yyy zzz",
-        image: "assets/images/tourteauLiguine.jpg",
+        image: "assets/images/poulpe@3x.png",
+        description: [
+              "Qu'il est chaud le soleil",
+              "Quand nous somme en vacance",
+              "Y a d'la joie, des hirondelles",
+              "C'est le sud de la France",
+              "Papa bricole au garage",
+              "Maman lit dans la chaise longue",
+              "Dans ce joli paysage",
+              "Moi, je me balade",
+              "Que du bonheur!",
+              "Que du bonheur!"
+          ]
+      },
+      {
+        title: "Recettes",
+        index:4,
+        subtitle: "xxx yyy zzz",
+        image: "assets/images/poulpe@3x.png",
+        description: [
+              "Qu'il est chaud le soleil",
+              "Quand nous somme en vacance",
+              "Y a d'la joie, des hirondelles",
+              "C'est le sud de la France",
+              "Papa bricole au garage",
+              "Maman lit dans la chaise longue",
+              "Dans ce joli paysage",
+              "Moi, je me balade",
+              "Que du bonheur!",
+              "Que du bonheur!"
+          ]
+      },
+      {
+        title: "Recettes",
+        index:5,
+        subtitle: "xxx yyy zzz",
+        image: "assets/images/poulpe@3x.png",
         description: [
               "Qu'il est chaud le soleil",
               "Quand nous somme en vacance",
