@@ -1,0 +1,48 @@
+<ion-header [translucent]="true" style="justify-self: flex-start;">
+  <div class="head">
+    <div class="home-btn" (click)="goToHome()">
+      <img src="assets/images/homeLogo.png" />
+    </div>
+    <div class="head__title">
+      Le Bateau de Thibault
+    </div>
+    <div class="cart-btn">
+     
+    </div>
+  </div>
+</ion-header>
+
+<div style="display: flex;flex-direction: column;justify-content: center;height: 100%;" class="container" >
+  <div style="margin-top: 20px;display: flex;flex-direction: column;justify-content: space-between;align-items: center;">
+    <ion-card style="padding: 20px;">
+      <ion-card-header>
+        <ion-card-title style="display: flex;flex-direction: row;align-items: center;justify-content: center;" >
+          <ion-icon style="font-size: 32px;" name="person-circle-outline"></ion-icon>
+          Mes Informations
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let input of getKeys()">
+            <ion-input [formControl]="form.controls[input]" [placeholder]="getCapitalized(input)" ></ion-input>
+          </ion-item>
+        </ion-list>
+        <div style="display: flex;flex-direction: row;justify-content: center;">
+          <ion-button color="success" [disabled]="!form.valid" (click)="payer()">Payer</ion-button>
+          <ion-button color="danger" (click)="cancel()" style="margin-right: 5px;">Annuler</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+  <div style="justify-self: flex-end;">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title style="text-align: center;">
+            Total : {{total}}€
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+  </div>
+</div>

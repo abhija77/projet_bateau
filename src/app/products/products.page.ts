@@ -27,7 +27,6 @@ export class ProductsPage implements OnInit {
   ngOnInit() {
     this.getProductList();
     this.cartService.cartProducts.subscribe(value => {
-      console.log(value.length);
       this.cartProducts = value;
     })
   }

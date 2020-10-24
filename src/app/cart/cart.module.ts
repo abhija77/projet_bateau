@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, UpperCasePipe } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartRoutingModule } from './cart-routing.module';
 import { CartComponent } from './cart.component';
+import { CartModalComponent } from './cart-modal/cart-modal.component';
 
 
 
@@ -13,8 +14,10 @@ import { CartComponent } from './cart.component';
     CommonModule,
     FormsModule,
     IonicModule,
-    CartRoutingModule
+    CartRoutingModule,
+    ReactiveFormsModule
   ],
-  declarations: [CartComponent]
+  declarations: [CartComponent,CartModalComponent],
+  providers: [UpperCasePipe]
 })
 export class CartModule {}

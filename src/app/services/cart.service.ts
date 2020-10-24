@@ -6,7 +6,6 @@ import { CartProduct } from '../models/cart-product.model';
   providedIn: 'root'
 })
 export class CartService {
-  //currentCartValue: CartProduct[] = [];
   cartProducts: BehaviorSubject<CartProduct[]> = new BehaviorSubject([]);
   constructor() { }
 
@@ -40,5 +39,9 @@ export class CartService {
       }
     });
     this.cartProducts.next(arr);
+  }
+
+  resetCart(){
+    this.cartProducts.next([]);
   }
 }

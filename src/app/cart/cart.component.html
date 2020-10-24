@@ -15,34 +15,34 @@
   
   <div class="cont" [ngStyle]="{'height' : getHeight() + 'px'}" >
     <div style="padding: 5px;justify-self: center" >
-      <!-- <ion-list-header>
-        <ion-label>List Header</ion-label>
-      </ion-list-header> -->
-      <ion-card *ngIf="cartList.length > 0"  style="overflow-y: scroll;" >
-      <ion-list>
-        <div >
-          <ion-item *ngFor="let item of cartList" >
-            <ion-label style="color: black;font-size: small;">{{item.quantity +" X " + item.product.name}}</ion-label>
-            <ion-label style="color: #0095FF;">{{item.product.price + "€"}}</ion-label>
-            <div style="display: flex;justify-content: center;align-items: center;">
-              <ion-button (click)="decrementQuantity(item.product.id)" [disabled]="item.quantity < 2" ><ion-icon name="remove-outline"></ion-icon></ion-button>
-              <span>{{item.quantity}}</span>
-              <ion-button (click)="incrementQuantity(item.product.id)"><ion-icon name="add-outline"></ion-icon></ion-button>
-              <ion-button color="danger" (click)="deleteProduct(item)"><ion-icon name="trash-outline"></ion-icon></ion-button>
-            </div>
-          </ion-item>
-        
-        </div>
-      </ion-list>
+        <!-- <ion-list-header>
+          <ion-label>List Header</ion-label>
+        </ion-list-header> -->
+        <ion-card *ngIf="cartList.length > 0"  style="overflow-y: scroll;" >
+        <ion-list>
+          <div >
+            <ion-item *ngFor="let item of cartList" >
+              <ion-label style="color: black;font-size: small;">{{item.quantity +" X " + item.product.name}}</ion-label>
+              <ion-label style="color: #0095FF;">{{item.product.price + "€"}}</ion-label>
+              <div style="display: flex;justify-content: center;align-items: center;">
+                <ion-button (click)="decrementQuantity(item.product.id)" [disabled]="item.quantity < 2" ><ion-icon name="remove-outline"></ion-icon></ion-button>
+                <span>{{item.quantity}}</span>
+                <ion-button (click)="incrementQuantity(item.product.id)"><ion-icon name="add-outline"></ion-icon></ion-button>
+                <ion-button color="danger" (click)="deleteProduct(item)"><ion-icon name="trash-outline"></ion-icon></ion-button>
+              </div>
+            </ion-item>
+          
+          </div>
+        </ion-list>
 
-    </ion-card>
-    <div *ngIf="cartList.length < 1" style="color: white;font-weight: bold;height: 50%;text-align: center;">
-      <p>
-        Votre Panier est vide.
-      </p>
-  </div>
+      </ion-card>
+      <div *ngIf="cartList.length < 1" style="color: black;font-weight: bold;height: 50%;text-align: center;">
+        <p>
+          Votre Panier est vide.
+        </p>
+      </div>
     </div>
-    <div style="width: 100%;text-align: center;" >
+    <div style="width: 100%;text-align: center;" *ngIf="cartList.length > 0">
         <ion-card style="padding: 10px;">
           <ion-card-header>
             <ion-card-title>
@@ -70,6 +70,9 @@
           </ion-card-content>
           <div>
             <span style="font-size: medium;">Total : {{getTotal() + "€"}}</span>
+          </div>
+          <div>
+            <ion-button color="primary" (click)="presentModal()" >Commander</ion-button>
           </div>
         </ion-card>
     </div>
