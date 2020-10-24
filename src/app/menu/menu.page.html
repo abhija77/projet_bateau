@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Vente en direct de notre bateau</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        Keep close to Nature's heart... and break clear away, once in awhile,
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      </ion-card-content>
+    </ion-card>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of this.categorie">
+          <app-button [name]="item.title" nameIcon="" (click)="goDetails(item.index)"></app-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

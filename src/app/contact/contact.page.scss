@@ -7,14 +7,23 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    overflow: hidden;
     ion-card{
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-        overflow: scroll;
-        overflow-wrap: break-word;
-        flex-wrap: wrap;
     }
+}
+
+ion-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ion-avatar{
+    padding-top: 10px;
+    width:200px;
+    height: 200px;
 }
 
 ion-card-title,
@@ -22,6 +31,10 @@ ion-card-subtitle{
     text-align: center;
 }
 
-.paragraphe{
+ion-img img {
+    padding-top: 150px;
+}
+
+.paragraphe {
     text-align: center;
 }

@@ -1,6 +1,7 @@
 const bateau = [
     {
       title: "De la Brise",
+      index:0,
       subtitle: "xxx yyy zzz",
       image: "assets/images/deLaBrise@3x.png",
       description: [
@@ -18,6 +19,7 @@ const bateau = [
     },
     {
         title: "Saphir",
+        index:1,
         subtitle: "xxx yyy zzz",
         image: "assets/images/saphir@3x.png",
         description: [
@@ -35,6 +37,7 @@ const bateau = [
     },
     {
         title: "Gast Micher",
+        index:2,
         subtitle: "xxx yyy zzz",
         image: "assets/images/gastMicher@3x.png",
         description: [
@@ -52,6 +55,7 @@ const bateau = [
     },
     {
         title: "Aquilon",
+        index:3,
         subtitle: "xxx yyy zzz",
         image: "assets/images/aquilon@3x.png",
         description: [
