@@ -52,7 +52,7 @@ export class CartModalComponent implements OnInit {
     const toast = await this.toastController.create({
       message: 'Votre commande a bien été effectuée.',
       duration: 1000,
-      color: "green"
+      color: "success"
     });
     toast.present();
   }
@@ -64,7 +64,7 @@ export class CartModalComponent implements OnInit {
       address: new FormControl('', Validators.required),
       city: new FormControl('', Validators.required),
       country: new FormControl('', Validators.required)
-    });    
+    });
   }
 
 }
