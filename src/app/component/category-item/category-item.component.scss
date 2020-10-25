@@ -1,8 +1,9 @@
 .card.icon{
-    color: white;
+    color: rgb(0, 98, 255);
     padding-right: 3%;
   }
 
-  ion-card,ion-item{
+  ion-card,ion-item,ion-card-header{
     border-radius: 50px;
+    background-color: white;
   }
