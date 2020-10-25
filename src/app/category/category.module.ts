@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { CategoryPageRoutingModule } from './category-routing.module';
-
+import {HeaderComponent} from '../component/header/header.component';
 import { CategoryItemComponent } from '../component/category-item/category-item.component';
 import { CategoryPage } from './category.page';
 
@@ -16,6 +16,6 @@ import { CategoryPage } from './category.page';
     IonicModule,
     CategoryPageRoutingModule
   ],
-  declarations: [CategoryPage, CategoryItemComponent]
+  declarations: [CategoryPage, CategoryItemComponent,HeaderComponent]
 })
 export class CategoryPageModule { }

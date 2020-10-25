@@ -1,0 +1,14 @@
+<ion-header [translucent]="false">
+  <div class="head">
+    <div class="home-btn">
+      <img src="assets/images/homeLogo.png" [routerLink]="['']"/>
+    </div>
+    <div class="head__title">
+      Le Bateau de Thibault
+    </div>
+    <div class="cart-btn" (click)="goToCart()">
+      <img src="assets/images/cartLogo.png" alt="">
+      <ion-badge color="primary">{{cartProducts.length}}</ion-badge>
+    </div>
+  </div>
+</ion-header>
