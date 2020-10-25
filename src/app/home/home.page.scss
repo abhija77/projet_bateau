@@ -10,14 +10,16 @@
 ion-content{
   display: flex;
   flex-direction: column;
+  color:white;
 }
 
-ion-card{
-  opacity: 1;
-  color:black;
+ion-card,ion-card-subtitle{
+  color:white;
+  background-color:black;
   text-align: center;
   border-radius: 15px;
 }
+
 
 #buttons{
   display: flex;
