@@ -13,7 +13,7 @@
     </div>
   </ion-header>
 
-  <div class="cont" [ngStyle]="{'height' : getHeight() + 'px'}" >
+  <div class="cont" [ngStyle]="{'height' : getHeight() + 'px','overflow-y':'scroll'}" >
     <div style="padding: 5px;justify-self: center" >
         <!-- <ion-list-header>
           <ion-label>List Header</ion-label>
@@ -69,7 +69,7 @@
 
           </ion-card-content>
           <div>
-            <span style="font-size: 32px;color:white">Total : {{getTotal() + "€"}}</span>
+            <span style="font-size: 32px;color:black">Total : {{getTotal() + "€"}}</span>
           </div>
           <div>
             <ion-button color="primary" (click)="presentModal()" >Commander</ion-button>

@@ -31,6 +31,10 @@ export class ProductsPage implements OnInit {
     })
   }
 
+  isInCart(id: number){
+    return this.cartProducts.some(value => value.product.id == id);
+  }
+
   addToCart(element: CartProduct){
     this.cartService.addProduct(element);
   }

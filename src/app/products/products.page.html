@@ -22,7 +22,7 @@
 
   <div id="container">
     <div class="title">
-      Choisissez vos produits
+      
     </div>
     <div class="list">
         <ion-card *ngFor="let product of products">
@@ -30,9 +30,9 @@
               <ion-icon name="fish" class="card icon"></ion-icon>
               <ion-label>{{ product.name }}</ion-label>
               <ion-item>
-                <ion-label> {{ product.price }} €</ion-label>
+                <ion-label>{{ product.price }}€</ion-label>
               </ion-item>
-              <ion-button (click)="toggleActionCart(product)" ><ion-icon name="cart-outline"></ion-icon></ion-button>
+              <ion-button (click)="toggleActionCart(product)" [color]="isInCart(product.id) ? 'danger' : 'primary' "><ion-icon [name]="isInCart(product.id) ? 'bag-remove' : 'bag-add'"></ion-icon></ion-button>
             </ion-item>
         </ion-card>
     </div>

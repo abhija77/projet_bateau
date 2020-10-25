@@ -1,5 +1,8 @@
 #container{
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(0,255,209,1) 100%);
+    //background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 18%, rgba(0,255,209,1) 100%);
+    background-image: url("../../assets/images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 80%;
     height: 100%;
     overflow: auto;
