@@ -17,7 +17,7 @@
 }
 
 .priceContainer {
-    
+
     justify-self: flex-end;
 }
 
@@ -34,19 +34,19 @@
   }
   .list {
     display: flex;
-    flex-direction: column;  
+    flex-direction: column;
   }
-  
+
   .card.icon{
     color: rgb(0, 98, 255);
     padding-right: 3%;
   }
-  
+
   .item.item-list {
       border-color: rgba(0, 0, 0, 0);
       background-color: rgba(0, 0, 0, 0);
   }
-  
+
   .head__title {
     text-align: center;
     padding-right: 30px;
@@ -67,8 +67,8 @@
   .cart-btn > img{
     height: 35px;
   }
-  
-  
+
+
   @font-face {
     font-family: 'Vegan';
     src: url('../../assets/VeganStyle.ttf');//mine
